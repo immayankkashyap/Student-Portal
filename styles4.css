@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Required for positioning the pseudo-element */
+    background-color: #f4f4f9;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('for_welcome.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    filter: blur(2px);
+    /* Slight blur */
+    z-index: -1;
+    /* Send the background behind the content */
+}
+
+/* Header Styles */
+h1 {
+    color: #25bb46;
+    /* Change text color to white */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add a semi-transparent dark background */
+    padding: 10px 20px;
+    /* Padding for better visibility */
+    border-radius: 10px;
+    /* Rounded corners */
+    text-align: center;
+    font-size: 36px;
+    z-index: 1;
+    /* Ensure text is above the background */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.8);
+    /* Add a stronger shadow for better readability */
+}
+
+/* Paragraph Styles */
+p {
+    color: #fff;
+    /* Change text color to white */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background for paragraph */
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0;
+    z-index: 1;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    /* Add text shadow for better readability */
+}
+
+p a {
+    color: #4CAF50;
+    /* Green color for logout link */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0;
+    /* Remove padding */
+    background-color: transparent;
+    /* No background */
+    z-index: 1;
+}
+
+p a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Link Styles for other links */
+a {
+    color: #4CAF50;
+    /* Green color for links */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Light background with some transparency */
+    z-index: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional shadow for depth */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+/* Top-right floating link */
+#getinfo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+div a {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+div a:hover {
+    background-color: #45a049;
+}
+
+/* Ensure content stays above background */
+h1,
+p,
+a,
+div {
+    z-index: 1;
+    /* Ensures all content is above the blurred background */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.user-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px 30px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  z-index: 1;
+}
